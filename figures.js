@@ -4,7 +4,7 @@ console.group("square");
 // const sideSquare = 5; 
 // console.log ("square size is " + sideSquare + " cm");
 
-function perimeterSquare( sides){
+function perimeterSquare(sideSquare){
     return sideSquare * 4;
 }
 
@@ -84,5 +84,46 @@ function perimeterCircle (circleRadius) {
     return diameter * PI; 
 }
 
+//insert this with HTML 
+
+function calculatePerimeterSquare(){
+    const input = document.getElementById ("squareSide");
+    const value = input.value;
+
+    const perimeter = perimeterSquare(value); 
+    alert (perimeter); 
+}
+
+function calculateAreaSquare (){
+    const input = document.getElementById ('squareSide');
+    const value = input.value; 
+
+    const area = areaSquare(value); 
+    alert (area);
+}
 
 
+//isosceles triangle
+console.group ("triangleIsoceles");
+
+function heightTriangle ()
+{
+    var side1 = document.getElementById('side1').value;
+    var side2 = document.getElementById ('side2').value;
+    var side3  = document.getElementById ('base').value; 
+    
+    return (Math.sqrt(side1 * side2) - ((side3*side3)/4));
+
+}
+
+function calculateHeightTriangle (){
+
+if (side1 === side2){
+    
+    const height = heightTriangle(value);
+    alert(height); 
+    document.write (height)
+    
+
+}
+}
