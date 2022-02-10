@@ -106,24 +106,41 @@ function calculateAreaSquare (){
 //isosceles triangle
 console.group ("triangleIsoceles");
 
-function heightTriangle ()
+function heightTriangle(side1, side2, side3)
 {
-    var side1 = document.getElementById('side1').value;
-    var side2 = document.getElementById ('side2').value;
-    var side3  = document.getElementById ('base').value; 
-    
-    return (Math.sqrt(side1 * side2) - ((side3*side3)/4));
-
+ const height = (Math.sqrt((side1 * side2) - ((side3*side3)/4)));
+ return  height
 }
 
-function calculateHeightTriangle (){
+function calculateHeightTriangle ()
+{
+if (inputSide1 === inputSide2){
+    var inputSide1 = document.getElementById("side1")
+    var side1Value =  inputSide1.value; 
 
-if (side1 === side2){
-    
-    const height = heightTriangle(value);
-    alert(height); 
-    document.write (height)
+    var inputSide2 = document.getElementById("side2")
+    var side2Value = inputSide2.value; 
+
+    var inputSide3 = document.getElementById("side3")
+    var side3Value = inputSide3.value; 
     
 
+    const heigthTrianglheigthTriangleisosceleseisosceles =  heightTriangle(side1Value, side2Value, side3Value);
+    alert (heigthTrianglheigthTriangleisosceleseisosceles)
+}
+else (inputSide1 !== inputSide2)
+{
+    console.error('try again')
 }
 }
+
+// function calculateHeightTriangle (){
+  
+
+//     const height = heightTriangle
+//     alert (height);
+// }
+
+
+
+
